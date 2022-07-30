@@ -6,9 +6,12 @@
                 var date = document.getElementById("date").value;
                 if(date.match(reg) ==null){
                     document.getElementById("result1").style.display = "block";
+                    document.getElementById("result2").style.display = "none";
 
                 }else{
                     document.getElementById("result2").style.display = "block";
+                    document.getElementById("result1").style.display = "none";
+
 
                 
                 }
