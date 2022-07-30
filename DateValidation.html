@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function validateForm(){
+                var reg = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+                var date = document.getElementById("date").value;
+                if(date.match(reg) ==null){
+                    document.getElementById("result1").style.display = "block";
+
+                }else{
+                    document.getElementById("result2").style.display = "block";
+
+                }
+            }
+        </script>
+    </head>
+    <center>
+        <h2>Date Validation</h2>
+        <table>
+            <tr>
+                <td>Enter the date:</td>
+                <td><input type="text" name="" id="date"></td>
+                <td><div id="result1" style="color: red;display: none;" >Date format is wrong</div></td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                   <center> <button type="submit"  name="" id="button1" onclick="validateForm()">submit</button></center>
+                </td>
+            </tr>
+        </table>
+        <div id="result2" style="color: green;display: none;" >Date format is correct</div>
+    </center>
+</html>
